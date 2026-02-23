@@ -16,7 +16,7 @@
 <td align="center">
 
 <em style="color: steelblue;">
-→ An <a href="https://anncollin.github.io/DieAreaPrediction/">interactive web interface</a> is available to perform silicon die area predictions without running the Jupyter notebooks locally. ←
+💡 An <a href="https://anncollin.github.io/DieAreaPrediction/">interactive web interface</a> is available to perform silicon die area predictions without any installation. 
 </em>
 
 <br>
