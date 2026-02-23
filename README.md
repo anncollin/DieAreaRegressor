@@ -1,23 +1,23 @@
 # DieAreaRegressor
 
-An [interactive web interface](https://anncollin.github.io/DieAreaPrediction/) is available at the link above to perform silicon die area predictions without running the Jupyter notebooks locally.
+<p align="center">
+  <a href="#about">About</a> &nbsp;&bull;&nbsp;
+  <a href="#environment-setup">Environment Setup</a> &nbsp;&bull;&nbsp;
+  <a href="#important-note-about-data">Important Note About Data</a> &nbsp;&bull;&nbsp;
+  <a href="#repository-structure">Repository Structure</a> &nbsp;&bull;&nbsp;
+  <a href="#citation">Citation</a>
+</p>
 
----
+<br>
 
-## Table of Contents
+<p align="center">
+  <em style="color: steelblue;">
+    An <a href="https://anncollin.github.io/DieAreaPrediction/">interactive web interface</a> is available to perform silicon die area predictions without running the Jupyter notebooks locally.
+  </em>
+</p>
 
-- [Context](#context)
-- [Environment Setup](#environment-setup)
-- [Important Note About Data](#important-note-about-data)
-- [Repository Structure](#repository-structure)
-  - [00_extractDataset.ipynb](#00_extractdatasetipynb)
-  - [01_chooseBestModel.ipynb](#01_choosebestmodelipynb)
-  - [02_observeBestModel.ipynb](#02_observebestmodelipynb)
-- [Citation](#citation)
 
----
-
-## Context
+## About
 
 This repository contains the code associated with our work on silicon die area estimation for integrated circuits used in Life-Cycle Assessment (LCA) modeling. The full paper will be available soon on ArXiv. 
 
