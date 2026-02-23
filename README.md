@@ -20,7 +20,7 @@
 </em>
 
 <br>
-<img src="assets/demo.gif" width="980">
+<img src="assets/demo.gif" width="780">
 
 </td>
 </tr>
