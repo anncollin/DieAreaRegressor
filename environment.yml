@@ -1,0 +1,15 @@
+name: ossda
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - numpy
+      - pandas
+      - scipy
+      - scikit-learn
+      - matplotlib
+      - seaborn
+      - ipython
+      - jupyter

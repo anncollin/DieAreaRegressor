@@ -1,0 +1,22 @@
+Model,Best Params,Train RMSE (mean),Train RMSE (std),Val RMSE (mean),Val RMSE (std),Best Estimator
+Linear Regression,{},0.5022231419938014,0.013930999610669884,0.5037113567469036,0.17337233496295057,"Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(remainder='passthrough', transformers=[])),
+                ('regressor', LinearRegression())])"
+KNN,"{'regressor__n_neighbors': 10, 'regressor__p': 1, 'regressor__weights': 'distance'}",0.12147017917098371,0.0067238162824345684,0.5206354077890634,0.13979859243675555,"Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(remainder='passthrough', transformers=[])),
+                ('regressor',
+                 KNeighborsRegressor(n_neighbors=10, p=1, weights='distance'))])"
+Decision Tree,"{'regressor__max_depth': 3, 'regressor__min_samples_leaf': 5, 'regressor__min_samples_split': 2}",0.4407292768688086,0.011273189256678105,0.4928851553778928,0.14238347509009489,"Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(remainder='passthrough', transformers=[])),
+                ('regressor',
+                 DecisionTreeRegressor(max_depth=3, min_samples_leaf=5,
+                                       random_state=0))])"
+SVR,"{'regressor__C': 1.0, 'regressor__degree': 2, 'regressor__epsilon': 0.1, 'regressor__kernel': 'rbf'}",0.4709866163394397,0.014624747464255301,0.4932413295447077,0.18616038296407664,"Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(remainder='passthrough', transformers=[])),
+                ('regressor', SVR(degree=2))])"
+MLP,"{'regressor__activation': 'relu', 'regressor__alpha': 0.01, 'regressor__hidden_layer_sizes': (50, 20), 'regressor__learning_rate_init': 0.01}",0.4606108440674212,0.013135095450001617,0.4825191709141741,0.17295289455538873,"Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(remainder='passthrough', transformers=[])),
+                ('regressor',
+                 MLPRegressor(alpha=0.01, hidden_layer_sizes=(50, 20),
+                              learning_rate_init=0.01, max_iter=2000,
+                              random_state=0))])"

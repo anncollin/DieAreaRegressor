@@ -1,0 +1,37 @@
+Model,Best Params,Train RMSE (mean),Train RMSE (std),Val RMSE (mean),Val RMSE (std),Best Estimator
+Linear Regression,{},0.4082494475468584,0.012054043437304514,0.41894539694893873,0.15454182396787366,"Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(remainder='passthrough',
+                                   transformers=[('cat',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['P_type'])])),
+                ('regressor', LinearRegression())])"
+KNN,"{'regressor__n_neighbors': 10, 'regressor__p': 1, 'regressor__weights': 'distance'}",0.28168594307019446,0.010088819938738877,0.3942421840210706,0.12690416348195543,"Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(remainder='passthrough',
+                                   transformers=[('cat',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['P_type'])])),
+                ('regressor',
+                 KNeighborsRegressor(n_neighbors=10, p=1, weights='distance'))])"
+Decision Tree,"{'regressor__max_depth': 10, 'regressor__min_samples_leaf': 2, 'regressor__min_samples_split': 5}",0.29128513611411677,0.008997808244412944,0.41088033634768,0.11899390219272667,"Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(remainder='passthrough',
+                                   transformers=[('cat',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['P_type'])])),
+                ('regressor',
+                 DecisionTreeRegressor(max_depth=10, min_samples_leaf=2,
+                                       min_samples_split=5, random_state=0))])"
+SVR,"{'regressor__C': 10, 'regressor__degree': 2, 'regressor__epsilon': 0.1, 'regressor__kernel': 'rbf'}",0.37585847804765204,0.011971710474465314,0.39383392537130785,0.1464897751344243,"Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(remainder='passthrough',
+                                   transformers=[('cat',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['P_type'])])),
+                ('regressor', SVR(C=10, degree=2))])"
+MLP,"{'regressor__activation': 'relu', 'regressor__alpha': 0.01, 'regressor__hidden_layer_sizes': (100,), 'regressor__learning_rate_init': 0.01}",0.39138727615855123,0.011248315203238305,0.4088128593879565,0.15274215704349733,"Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(remainder='passthrough',
+                                   transformers=[('cat',
+                                                  OneHotEncoder(handle_unknown='ignore'),
+                                                  ['P_type'])])),
+                ('regressor',
+                 MLPRegressor(alpha=0.01, learning_rate_init=0.01,
+                              max_iter=2000, random_state=0))])"
+Group-Wise Linear,{},0.3947555353293554,0.011904023812922873,0.41389543896617176,0.15145466890700013,GroupWiseLinearRegressor()

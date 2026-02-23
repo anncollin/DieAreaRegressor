@@ -1,0 +1,21 @@
+Model,Best Params,Train RMSE (mean),Train RMSE (std),Val RMSE (mean),Val RMSE (std),Best Estimator
+Linear Regression,{},0.40395017222627355,0.021150955324938433,0.365122395256092,0.24318708108664333,"Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(remainder='passthrough', transformers=[])),
+                ('regressor', LinearRegression())])"
+KNN,"{'regressor__n_neighbors': 10, 'regressor__p': 1, 'regressor__weights': 'distance'}",0.1703641693023198,0.00549461944208998,0.41602704554629055,0.1731056392154821,"Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(remainder='passthrough', transformers=[])),
+                ('regressor',
+                 KNeighborsRegressor(n_neighbors=10, p=1, weights='distance'))])"
+Decision Tree,"{'regressor__max_depth': 5, 'regressor__min_samples_leaf': 1, 'regressor__min_samples_split': 2}",0.31244336225637476,0.01608158758608181,0.39232096228549307,0.21891130201892914,"Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(remainder='passthrough', transformers=[])),
+                ('regressor',
+                 DecisionTreeRegressor(max_depth=5, random_state=0))])"
+SVR,"{'regressor__C': 10, 'regressor__degree': 2, 'regressor__epsilon': 0.1, 'regressor__kernel': 'rbf'}",0.39142372761848676,0.019636020024083076,0.3702504898907542,0.22445451066879957,"Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(remainder='passthrough', transformers=[])),
+                ('regressor', SVR(C=10, degree=2))])"
+MLP,"{'regressor__activation': 'relu', 'regressor__alpha': 0.0001, 'regressor__hidden_layer_sizes': (50, 20), 'regressor__learning_rate_init': 0.01}",0.3980812541255634,0.020785884710843014,0.3606382492019008,0.25808488782096667,"Pipeline(steps=[('preprocessor',
+                 ColumnTransformer(remainder='passthrough', transformers=[])),
+                ('regressor',
+                 MLPRegressor(hidden_layer_sizes=(50, 20),
+                              learning_rate_init=0.01, max_iter=2000,
+                              random_state=0))])"
