@@ -83,7 +83,7 @@ This repository contains multiple Jupyter notebooks corresponding to the analysi
 > - Visualize regression results  
 > - Compare estimation approaches  
 >
->
+---
 
 ## Citation
 
