@@ -31,7 +31,7 @@
 
 ## About
 
-This repository contains the code associated with our work on silicon die area estimation for integrated circuits used in Life-Cycle Assessment (LCA) modeling. The full paper will be available soon on ArXiv. 
+gitThis repository contains the code associated with the paper "Advancing silicon die area estimation for integrated circuit modeling in life-cycle assessments". The full paper is available here: https://link.springer.com/article/10.1007/s11367-026-02754-6
 
 ---
 
@@ -48,13 +48,9 @@ conda activate ossda
 
 ## Important Note About Data
 
-The OSSDA dataset will publicly available soon. The data files are not yet included in this repository.
+The OSSDA dataset is publicly available on Zenodo: https://zenodo.org/records/18739861
 
-As a consequence:
-
-- The Jupyter notebooks are not directly runnable at this stage.  
-- All notebook outputs are stored and can be viewed.  
-- A `data/` folder will be added in a future update.
+The OSSDA_021726_FRAUNHOFER_IZM.xlsx and OSSDA_021726_UCLOUVAIN.xlsx files (which together form OSSDA) are not included in this repository and need to be downloaded from Zenodo and copied and pasted manually into a data/ folder that you need to create. 
 
 ---
 
@@ -99,4 +95,4 @@ This repository contains multiple Jupyter notebooks corresponding to the analysi
 
 ## Citation
 
-The full citation of the associated publication will be added soon.
+Wattiez, A., Collin, AS., Dethienne, R. et al. Advancing silicon die area estimation for integrated circuit modeling in life-cycle assessments. Int J Life Cycle Assess 31, 186 (2026). https://doi.org/10.1007/s11367-026-02754-6
