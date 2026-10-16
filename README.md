@@ -50,7 +50,7 @@ conda activate ossda
 
 The OSSDA dataset is publicly available on Zenodo: https://zenodo.org/records/18739861
 
-The OSSDA_021726_FRAUNHOFER_IZM.xlsx and OSSDA_021726_UCLOUVAIN.xlsx files (which together form OSSDA) are not included in this repository and need to be downloaded from Zenodo and copied and pasted manually into the data/ folder. 
+The OSSDA_021726_FRAUNHOFER_IZM.xlsx and OSSDA_021726_UCLOUVAIN.xlsx files (which together form OSSDA) are not included in this repository and need to be downloaded from Zenodo and copied and pasted manually into a data/ folder that you need to create. 
 
 ---
 
