@@ -29,7 +29,7 @@ def refit_and_plot_univariate(feature="P_area", folder="CVRuns"):
     # ----------------------------------------------------------------------------
     # Load data
     # ----------------------------------------------------------------------------
-    df_train, df_test = load_data("Data/dataset.xlsx")
+    df_train, df_test = load_data()
     features = [feature]
 
     # ----------------------------------------------------------------------------
@@ -137,7 +137,7 @@ def plot_groupwise_linear_models(features=["P_area", "P_type"], folder="CVRuns")
     ###################################################################################################
     # PART 1 - LOAD AND PREPARE DATA
     ###################################################################################################
-    df_train, df_test = load_data("Data/dataset.xlsx")
+    df_train, df_test = load_data()
     X_train, y_train, X_test, y_test, _ = prepare_data(df_train, features, df_test=df_test)
 
     if "P_type" not in X_train.columns:

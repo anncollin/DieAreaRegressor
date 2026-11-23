@@ -10,7 +10,9 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 #    Parameters:
 #    ---------------------------
 #    excel_path : str
-#        Path to Excel file containing sheets "data_combined" (train) and "data_demonstrator" (test).
+#        Path to Excel files containing sheets with train and test data.
+#        The dataset is divided into two parts: the UCLouvain part and the Fraunhofer part.
+#        The UCLouvain part contains data for the training set and the test set. The Fraunhofer part was used only in the train set. 
 #
 #    Returns:
 #    ---------------------------
@@ -18,7 +20,7 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 #        Cleaned training and test sets.
 #######################################################################################################
 
-def load_data(excel_path="dataset.xlsx"):
+def load_data(excel_path_1="data/OSSDA_021726_UCLOUVAIN.xlsx", excel_path_2="data/OSSDA_021726_FRAUNHOFER_IZM.xlsx"):
     
     selected_columns = {
         "attributed package type (aggregated)": "P_type",
@@ -30,13 +32,6 @@ def load_data(excel_path="dataset.xlsx"):
 
     def prepare_dataset(df, is_test=False):
         df = df.copy()
-
-        if not is_test:
-            # Remove rows with 'x' in ignore columns
-            df = df[
-                (df["to ignore (not an IC)"] != "x") &
-                (df["to ignore (p-type)"] != "x")
-            ].copy()
 
         # Select and rename columns (without 'isMultiple')
         columns_to_use = list(selected_columns.keys())
@@ -50,12 +45,15 @@ def load_data(excel_path="dataset.xlsx"):
         return df_selected
 
     # Load Excel sheets
-    df_combined     = pd.read_excel(excel_path, sheet_name="data_combined")
-    df_demonstrator = pd.read_excel(excel_path, sheet_name="data_demonstrator")
+    df_train_1    = pd.read_excel(excel_path_1, sheet_name="OSSDA_train")
+    df_test_1 = pd.read_excel(excel_path_1, sheet_name="OSSDA_test")
+    df_train_2 = pd.read_excel(excel_path_2, sheet_name="OSSDA_train")
+    df_combined_train = pd.concat([df_train_1, df_train_2], ignore_index=True, sort=False)
+    #print(df_combined_train)
 
     # Prepare datasets
-    df_train = prepare_dataset(df_combined, is_test=False)
-    df_test  = prepare_dataset(df_demonstrator, is_test=True)
+    df_train = prepare_dataset(df_combined_train, is_test=False)
+    df_test  = prepare_dataset(df_test_1, is_test=True)
 
     df_train = df_train.dropna(subset=["Die_area"])
     df_test  = df_test.dropna(subset=["Die_area"])  
